@@ -1982,3 +1982,24 @@ h1,h2,h3{ letter-spacing:-.02em; }
 .spec-table tr:nth-child(even){background:var(--c-tint)}
 .spec-table td:first-child{color:var(--c-muted);width:38%;font-weight:500}
 .spec-table td:last-child{color:var(--c-ink)}
+
+/* ===== Fix watermark: show full 4:3 product images (no crop) ===== */
+.product-visual-card img{
+  aspect-ratio: 4 / 3 !important;
+  object-fit: contain !important;
+  background: #fff;
+  padding: 10px;
+}
+/* Representative thumbnail on category / product cards */
+.category-card .cat-thumb,
+.product-card .pc-thumb{
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  background: #fff;
+  border: 1px solid var(--c-line, #e6eef6);
+  border-radius: 12px;
+  padding: 8px;
+  margin-bottom: 4px;
+}
+.category-card{ align-content: start; }
